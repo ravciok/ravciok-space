@@ -1,0 +1,20 @@
+{
+  "name": "ravciok-space",
+  "version": "1.0.0",
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.2.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "static": "mkdir -p dist/static && cp src/index.html dist/static/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ravciok/ravciok-space.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ravciok/ravciok-space/issues"
+  },
+  "homepage": "https://github.com/ravciok/ravciok-space#readme"
+}
