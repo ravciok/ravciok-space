@@ -1,0 +1,57 @@
+$main-bg: white;
+$blog-bg: #595fff;
+$section-color: white;
+$section-height: 150px;
+$section-height-mobile: 50px;
+
+.section {
+  position: relative;
+  z-index: 1;
+  &__bg {
+    background: $blog-bg;
+    color: $section-color;
+  }
+}
+
+.tilt {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  svg {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+  .shape-fill {
+    fill: $blog-bg;
+  }
+  &__top {
+    margin-bottom: -1px;
+    transform: rotate(180deg);
+    svg {
+      height: $section-height-mobile;
+      @media (min-width: $desktop-break) {
+        height: $section-height;
+      }
+    }
+  }
+  &__bottom {
+    margin-top: -1px;
+    svg {
+      height: $section-height-mobile;
+      @media (min-width: $desktop-break) {
+        height: $section-height;
+      }
+    }
+  }
+  &--reverse {
+    &.tilt__top {
+      transform: scaleX(-1) rotate(180deg);
+    }
+    &.tilt__bottom {
+      transform: scaleX(-1);
+    }
+  }
+}

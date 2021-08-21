@@ -1,0 +1,10 @@
+html,
+body {
+  font-family: $main-font;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: $primary-color;
+}

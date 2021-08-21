@@ -1,0 +1,42 @@
+.post-list {
+  display: flex;
+  flex-direction: column;
+  .post {
+    display: flex;
+    height: 150px;
+    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    .post__info {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      margin-right: 2rem;
+      .post__title {
+        @include line_clamp(2);
+        margin-bottom: 10px;
+      }
+      .post__description {
+        @include line_clamp(2);
+        color: $secondary-text-color;
+      }
+      .post__time {
+        @include horizontal_info_with_divider();
+      }
+    }
+    .post__cover {
+      display: none;
+      @media (min-width: $desktop-break) {
+        display: flex;
+        width: 40%;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

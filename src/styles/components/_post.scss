@@ -1,0 +1,12 @@
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  //border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  //padding-bottom: 0.5rem;
+  margin-bottom: 3rem;
+
+  &__date,
+  &__social {
+    @include horizontal_info_with_divider();
+  }
+}

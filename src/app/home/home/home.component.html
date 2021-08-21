@@ -1,0 +1,50 @@
+<app-section>
+  <div class="container" style="margin-bottom: -115px">
+    <div class="lead">
+      Hi, I'm Rafał Ciok.<br />
+      I'm passionate Frontend specialist.<br />
+      I help teams to build quality software.
+    </div>
+    <div class="picture"><img class="picture__image" src="assets/images/rafal-ciok-bw-web.png" /></div>
+  </div>
+</app-section>
+
+<app-section [tilt]="true" color="purple-bg">
+  <div class="container container--column">
+    <h1 class="container__title">Latest blog posts</h1>
+
+    <div *ngFor="let blog of blogs$ | async | slice: 0:5; trackBy: trackByFn">
+      <div class="card">
+        <h2>{{ blog.title }}</h2>
+        <p>{{ blog.description }}</p>
+        <a [routerLink]="[blog.route]">Read</a>
+      </div>
+    </div>
+  </div>
+</app-section>
+
+<app-section color="blue-bg">
+  <div class="container container--column">
+    <h1 class="container__title">Latest blog posts</h1>
+    <div *ngFor="let blog of blogs$ | async | slice: 0:5; trackBy: trackByFn">
+      <div class="card">
+        <h2>{{ blog.title }}</h2>
+        <p>{{ blog.description }}</p>
+        <a [routerLink]="[blog.route]">Read</a>
+      </div>
+    </div>
+  </div>
+</app-section>
+
+<app-section [tilt]="true" [mirror]="true" color="grey-bg">
+  <div class="container container--column">
+    <h1 class="container__title">Latest blog posts</h1>
+    <div *ngFor="let blog of blogs$ | async | slice: 0:5; trackBy: trackByFn">
+      <div class="card">
+        <h2>{{ blog.title }}</h2>
+        <p>{{ blog.description }}</p>
+        <a [routerLink]="[blog.route]">Read</a>
+      </div>
+    </div>
+  </div>
+</app-section>

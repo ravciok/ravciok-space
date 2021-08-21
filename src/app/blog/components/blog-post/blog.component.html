@@ -1,0 +1,21 @@
+<app-section>
+  <div class="container container--column" *ngIf="data$ | async as data">
+    <!--    <a routerLink="/blog">Back to list</a>-->
+    <h1 class="container__title">{{ data.title }}</h1>
+
+    <div class="post-header">
+      <div class="post-header__date">
+        <span>{{ data.date | date | date }}</span>
+        <span>{{ data.time }}</span>
+      </div>
+
+      <div class="post-header__social">
+        <a [href]="twitterLink" (click)="openInPopup(twitterLink, $event)"><span>twitter</span></a>
+        <a [href]="facebookLink" (click)="openInPopup(facebookLink, $event)"><span>facebook</span></a>
+        <a [href]="linkedinLink" (click)="openInPopup(linkedinLink, $event)"><span>linkedin</span></a>
+      </div>
+    </div>
+
+    <scully-content></scully-content>
+  </div>
+</app-section>
