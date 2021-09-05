@@ -23,9 +23,9 @@
   </div>
 </app-section>
 
-<app-section color="blue-bg">
+<app-section>
   <div class="container container--column">
-    <h1 class="container__title">Latest blog posts</h1>
+    <h1 class="container__title">About me</h1>
     <div *ngFor="let blog of blogs$ | async | slice: 0:5; trackBy: trackByFn">
       <div class="card">
         <h2>{{ blog.title }}</h2>
@@ -36,9 +36,9 @@
   </div>
 </app-section>
 
-<app-section [tilt]="true" [mirror]="true" color="grey-bg">
+<app-section [tilt]="true" color="grey-bg">
   <div class="container container--column">
-    <h1 class="container__title">Latest blog posts</h1>
+    <h1 class="container__title">Contact</h1>
     <div *ngFor="let blog of blogs$ | async | slice: 0:5; trackBy: trackByFn">
       <div class="card">
         <h2>{{ blog.title }}</h2>

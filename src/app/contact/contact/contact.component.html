@@ -1,0 +1,28 @@
+<app-section>
+  <div class="container container--column">
+    <h1 class="container__title">Contact</h1>
+
+    <div class="">
+      <form name="contact" method="POST" action="/contact/success" data-netlify="true" data-netlify-recaptcha="true">
+        <div class="form-field form-field--half">
+          <input id="name" type="text" name="name" placeholder="Name" required />
+          <label for="name">Name</label>
+        </div>
+
+        <div class="form-field form-field--half">
+          <input id="email" type="email" name="email" placeholder="Email" required />
+          <label for="email">Email</label>
+        </div>
+
+        <div class="form-field">
+          <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
+          <label for="message">Message</label>
+        </div>
+
+        <div class="form-field form-field--end">
+          <button type="submit">Send message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</app-section>

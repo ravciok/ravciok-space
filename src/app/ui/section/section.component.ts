@@ -6,8 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./section.component.scss'],
 })
 export class SectionComponent {
-  @Input() public title!: string;
-  @Input() public vertical = false;
   @Input() public tilt = false;
   @Input() public mirror = false;
 }

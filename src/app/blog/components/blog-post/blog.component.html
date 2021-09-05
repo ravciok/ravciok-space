@@ -10,12 +10,16 @@
       </div>
 
       <div class="post-header__social">
-        <a [href]="twitterLink" (click)="openInPopup(twitterLink, $event)"><span>twitter</span></a>
-        <a [href]="facebookLink" (click)="openInPopup(facebookLink, $event)"><span>facebook</span></a>
-        <a [href]="linkedinLink" (click)="openInPopup(linkedinLink, $event)"><span>linkedin</span></a>
+        <a [href]="twitterLink"><span>twitter</span></a>
+        <a [href]="facebookLink"><span>facebook</span></a>
+        <a [href]="linkedinLink"><span>linkedin</span></a>
       </div>
     </div>
 
     <scully-content></scully-content>
   </div>
+</app-section>
+
+<app-section>
+  <div class="container" #comments></div>
 </app-section>

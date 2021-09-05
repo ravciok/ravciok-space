@@ -11,8 +11,8 @@ const routes: Routes = [
     loadChildren: () => import('../blog/blog.module').then((m) => m.BlogModule),
   },
   {
-    path: 'resume',
-    loadChildren: () => import('../resume/resume.module').then((m) => m.ResumeModule),
+    path: 'contact',
+    loadChildren: () => import('../contact/contact.module').then((m) => m.ContactModule),
   },
   {
     path: 'about',

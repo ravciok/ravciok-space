@@ -56,24 +56,24 @@ $total-items: 3;
     @media (min-width: $desktop-break) {
       display: block;
       .navigation__element {
-        margin: 0 0 0 5rem;
+        margin: 0 0 0 3rem;
         text-decoration: none;
 
         &--active {
           position: relative;
           font-weight: 700;
 
-          &::after {
-            position: absolute;
-            left: -14px;
-            top: 50%;
-            transform: translateY(-50%);
-            display: block;
-            content: '';
-            width: 4px;
-            height: 20px;
-            background: mediumpurple;
-          }
+          //&::after {
+          //  position: absolute;
+          //  left: -14px;
+          //  top: 50%;
+          //  transform: translateY(-50%);
+          //  display: block;
+          //  content: '';
+          //  width: 4px;
+          //  height: 20px;
+          //  background: mediumpurple;
+          //}
         }
       }
     }
@@ -92,8 +92,7 @@ $total-items: 3;
       appearance: none;
       &:checked {
         & ~ .navigation__container {
-          //height: 100vh;
-          width: 100vw;
+          height: 100vh;
           & > .navigation__list > a {
             transform: none;
             color: white;
@@ -169,10 +168,9 @@ $total-items: 3;
         position: fixed;
         z-index: 10;
         top: 0;
-        right: 0;
-        width: 0;
-        height: 100vh;
-        //height: 0;
+        left: 0;
+        width: 100vw;
+        height: 0;
         background: #595fff;
         display: flex;
         justify-content: center;

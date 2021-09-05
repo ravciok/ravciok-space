@@ -7,6 +7,6 @@
 
   &__date,
   &__social {
-    @include horizontal_info_with_divider();
+    @include horizontal-info-with-divider();
   }
 }

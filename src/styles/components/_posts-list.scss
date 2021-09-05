@@ -14,15 +14,15 @@
       justify-content: space-around;
       margin-right: 2rem;
       .post__title {
-        @include line_clamp(2);
+        @include line-clamp(2);
         margin-bottom: 10px;
       }
       .post__description {
-        @include line_clamp(2);
+        @include line-clamp(2);
         color: $secondary-text-color;
       }
       .post__time {
-        @include horizontal_info_with_divider();
+        @include horizontal-info-with-divider();
       }
     }
     .post__cover {
