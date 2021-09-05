@@ -1,6 +1,7 @@
 <app-section>
   <div class="container container--column" *ngIf="data$ | async as data">
     <!--    <a routerLink="/blog">Back to list</a>-->
+
     <h1 class="container__title">{{ data.title }}</h1>
 
     <div class="post-header">
@@ -10,9 +11,9 @@
       </div>
 
       <div class="post-header__social">
-        <a [href]="twitterLink"><span>twitter</span></a>
-        <a [href]="facebookLink"><span>facebook</span></a>
-        <a [href]="linkedinLink"><span>linkedin</span></a>
+        <a [href]="twitterLink" target="_blank"><span>twitter</span></a>
+        <a [href]="facebookLink" target="_blank"><span>facebook</span></a>
+        <a [href]="linkedinLink" target="_blank"><span>linkedin</span></a>
       </div>
     </div>
 
@@ -21,5 +22,5 @@
 </app-section>
 
 <app-section>
-  <div class="container" #comments></div>
+  <div class="container" id="commentsContainer"></div>
 </app-section>
