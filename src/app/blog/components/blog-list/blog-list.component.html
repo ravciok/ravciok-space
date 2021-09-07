@@ -1,41 +1,13 @@
-<!--<app-section>-->
-<!--  <div class="container container&#45;&#45;column">-->
-<!--    <h1 class="container__title">Recent blog posts</h1>-->
-
-<!--    <div class="post-list">-->
-<!--      <ng-container *ngFor="let blog of blogs$ | async; trackBy: trackByFn">-->
-<!--        <div class="post">-->
-<!--          <div class="post__info">-->
-<!--            <a [routerLink]="[blog.route]">-->
-<!--              <h2 class="post__title">{{ blog.title }}</h2>-->
-<!--              <p class="post__description">{{ blog.description }}</p>-->
-<!--            </a>-->
-<!--            <div class="post__time">-->
-<!--              <span>{{ blog.date | date }}</span>-->
-<!--              <span>{{ blog.time }}</span>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="post__cover">-->
-<!--            <a [routerLink]="[blog.route]">-->
-<!--              <img src="https://picsum.photos/400/300" />-->
-<!--            </a>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </ng-container>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</app-section>-->
-
-<app-section>
+<space-section>
   <div class="container container--column">
-    <h1 class="container__title">Recent blog posts</h1>
+    <h2 class="container__title">Latest posts</h2>
 
     <div class="post-list">
       <ng-container *ngFor="let blog of blogs$ | async; trackBy: trackByFn">
         <div class="post">
           <div class="post__info">
             <a [routerLink]="[blog.route]">
-              <h2 class="post__title">{{ blog.title }}</h2>
+              <h3 class="post__title">{{ blog.title }}</h3>
               <p class="post__description">{{ blog.description }}</p>
             </a>
             <div class="post__time">
@@ -52,4 +24,4 @@
       </ng-container>
     </div>
   </div>
-</app-section>
+</space-section>

@@ -20,3 +20,12 @@
     }
   }
 }
+
+@mixin reset-form-field() {
+  background: none;
+  border: none;
+  appearance: none;
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}

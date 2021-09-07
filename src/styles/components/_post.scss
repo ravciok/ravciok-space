@@ -1,12 +1,21 @@
 .post-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   //border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   //padding-bottom: 0.5rem;
   margin-bottom: 3rem;
 
-  &__date,
-  &__social {
+  &__date {
     @include horizontal-info-with-divider();
+  }
+  &__social {
+    display: flex;
+    & > a {
+      margin-right: 1rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 }

@@ -1,8 +1,9 @@
-<app-section>
+<space-section>
   <div class="container container--column" *ngIf="data$ | async as data">
-    <!--    <a routerLink="/blog">Back to list</a>-->
-
-    <h1 class="container__title">{{ data.title }}</h1>
+    <div style="display: flex; margin-bottom: 1rem">
+      <a class="space-link" routerLink="/blog"><fa-icon [icon]="icons.faLongArrowAltLeft"></fa-icon> Back to list</a>
+    </div>
+    <h2 class="container__title">{{ data.title }}</h2>
 
     <div class="post-header">
       <div class="post-header__date">
@@ -11,16 +12,22 @@
       </div>
 
       <div class="post-header__social">
-        <a [href]="twitterLink" target="_blank"><span>twitter</span></a>
-        <a [href]="facebookLink" target="_blank"><span>facebook</span></a>
-        <a [href]="linkedinLink" target="_blank"><span>linkedin</span></a>
+        <a class="space-link space-link--icon" [href]="twitterLink" target="_blank"
+          ><fa-icon [icon]="icons.faTwitter"></fa-icon>
+        </a>
+        <a class="space-link space-link--icon" [href]="linkedinLink" target="_blank"
+          ><fa-icon [icon]="icons.faLinkedin"></fa-icon
+        ></a>
+        <a class="space-link space-link--icon" [href]="facebookLink" target="_blank"
+          ><fa-icon [icon]="icons.faFacebook"></fa-icon
+        ></a>
       </div>
     </div>
 
     <scully-content></scully-content>
   </div>
-</app-section>
+</space-section>
 
-<app-section>
+<space-section>
   <div class="container" id="commentsContainer"></div>
-</app-section>
+</space-section>

@@ -15,7 +15,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "space",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -32,6 +32,8 @@
             ],
             "styles": [
               "node_modules/normalize.css/normalize.css",
+              "node_modules/@fontsource/dm-serif-display",
+              "node_modules/@fontsource/roboto",
               "src/styles.scss"
             ],
             "scripts": []

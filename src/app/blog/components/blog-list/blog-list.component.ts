@@ -4,7 +4,7 @@ import { map, tap } from 'rxjs/operators';
 import { ScullyRoutesService } from '@scullyio/ng-lib';
 
 @Component({
-  selector: 'app-blog',
+  selector: 'space-blog',
   templateUrl: './blog-list.component.html',
   styleUrls: ['./blog-list.component.scss'],
 })

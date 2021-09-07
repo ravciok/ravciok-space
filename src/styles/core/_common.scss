@@ -10,7 +10,28 @@
     flex-direction: column;
   }
   &__title {
-    font-family: $decoration-font;
-    margin-bottom: 3rem;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+  }
+}
+
+.form-field {
+  display: flex;
+  position: relative;
+  margin: 0 0 2rem;
+  width: 100%;
+  &--start {
+    justify-content: flex-start;
+  }
+  &--center {
+    justify-content: center;
+  }
+  &--end {
+    justify-content: flex-end;
+  }
+  &--half {
+    @media (min-width: $desktop-break) {
+      width: 50%;
+    }
   }
 }

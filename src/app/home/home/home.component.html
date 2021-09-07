@@ -1,4 +1,4 @@
-<app-section>
+<space-section>
   <div class="container" style="margin-bottom: -115px">
     <div class="lead">
       Hi, I'm Rafał Ciok.<br />
@@ -7,11 +7,11 @@
     </div>
     <div class="picture"><img class="picture__image" src="assets/images/rafal-ciok-bw-web.png" /></div>
   </div>
-</app-section>
+</space-section>
 
-<app-section [tilt]="true" color="purple-bg">
+<space-section [tilt]="true" color="purple-bg">
   <div class="container container--column">
-    <h1 class="container__title">Latest blog posts</h1>
+    <h2 class="container__title">Latest blog posts</h2>
 
     <div *ngFor="let blog of blogs$ | async | slice: 0:5; trackBy: trackByFn">
       <div class="card">
@@ -21,11 +21,11 @@
       </div>
     </div>
   </div>
-</app-section>
+</space-section>
 
-<app-section>
+<space-section>
   <div class="container container--column">
-    <h1 class="container__title">About me</h1>
+    <h2 class="container__title">About me</h2>
     <div *ngFor="let blog of blogs$ | async | slice: 0:5; trackBy: trackByFn">
       <div class="card">
         <h2>{{ blog.title }}</h2>
@@ -34,11 +34,11 @@
       </div>
     </div>
   </div>
-</app-section>
+</space-section>
 
-<app-section [tilt]="true" color="grey-bg">
+<space-section [tilt]="true" color="grey-bg">
   <div class="container container--column">
-    <h1 class="container__title">Contact</h1>
+    <h2 class="container__title">Contact</h2>
     <div *ngFor="let blog of blogs$ | async | slice: 0:5; trackBy: trackByFn">
       <div class="card">
         <h2>{{ blog.title }}</h2>
@@ -47,4 +47,4 @@
       </div>
     </div>
   </div>
-</app-section>
+</space-section>

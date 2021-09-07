@@ -1,0 +1,46 @@
+.space-button {
+  padding: 1rem 2rem;
+  position: relative;
+  cursor: pointer;
+  font-weight: 500;
+  &::before {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    height: 50px;
+    width: 50px;
+    background: $primary-color;
+    opacity: 0.6;
+    border-radius: 2rem;
+    transition: width 0.3s ease;
+  }
+  &:hover,
+  &:focus {
+    &::before {
+      width: 100%;
+    }
+  }
+}
+
+.space-link {
+  color: $primary-color;
+  border-bottom: 1px solid white;
+
+  &--icon {
+    color: black;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    border-bottom: none;
+  }
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid $primary-color;
+    &.space-link--icon {
+      color: $primary-color;
+      border-bottom: none;
+    }
+  }
+}

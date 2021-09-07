@@ -1,4 +1,3 @@
-$blog-bg: $primary-color;
 $section-color: white;
 $section-height: 150px;
 $section-height-mobile: 50px;
@@ -7,7 +6,7 @@ $section-height-mobile: 50px;
   position: relative;
   z-index: 1;
   &__bg {
-    background: $blog-bg;
+    background: $primary-color;
     color: $section-color;
   }
 }
@@ -24,7 +23,7 @@ $section-height-mobile: 50px;
     width: 100%;
   }
   .shape-fill {
-    fill: $blog-bg;
+    fill: $primary-color;
   }
   &__top {
     margin-bottom: -1px;

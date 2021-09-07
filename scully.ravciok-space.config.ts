@@ -1,14 +1,15 @@
 import { HandledRoute, registerPlugin, ScullyConfig, setPluginConfig } from '@scullyio/scully';
+import { DisableAngular } from 'scully-plugin-disable-angular';
+
 import 'prismjs/components/prism-markup.js';
 import 'prismjs/components/prism-scss.js';
 import 'prismjs/components/prism-typescript.js';
 import 'prismjs/components/prism-json.js';
 
-const { DisableAngular } = require('scully-plugin-disable-angular');
+export const CommentsScript = 'commentsScript';
 
-function addBlogComments(dom: any, route: HandledRoute | undefined): Promise<any> {
-  if (route?.route.match(/^\/blog\/.+/)) {
-    dom.window.document.getElementById('commentsContainer').innerHTML = `
+const commentsScriptPlugin = (dom: any, route: HandledRoute | undefined): Promise<any> => {
+  dom.window.document.getElementById('commentsContainer').innerHTML = `
       <script
         src="https://utteranc.es/client.js"
         repo="ravciok/blog-comments"
@@ -16,33 +17,31 @@ function addBlogComments(dom: any, route: HandledRoute | undefined): Promise<any
         theme="github-light"
         crossorigin="anonymous"
         async
-      ></script>`;
-  }
+      ></script>
+    `;
 
   return Promise.resolve(dom);
-}
+};
 
-registerPlugin('postProcessByDom', 'commentsScript', addBlogComments);
+registerPlugin('postProcessByDom', CommentsScript, commentsScriptPlugin);
 
 setPluginConfig('md', { enableSyntaxHighlighting: true });
 setPluginConfig(DisableAngular, 'postProcessByHtml', {
-  removeState: true,
+  // removeState: true,
 });
-
-const postRenderers = [DisableAngular, 'commentsScript'];
 
 export const config: ScullyConfig = {
   projectRoot: './src',
   projectName: 'ravciok-space',
   outDir: './dist/static',
-  defaultPostRenderers: postRenderers,
+  defaultPostRenderers: [DisableAngular],
   routes: {
     '/blog/:slug': {
       type: 'contentFolder',
       slug: {
         folder: './content/blog',
       },
-      postRenderers: postRenderers,
+      postRenderers: [DisableAngular, CommentsScript],
     },
   },
 };

@@ -1,9 +1,10 @@
-$total-items: 3;
+$navigation-items: 3;
 
 .header {
   height: 80px;
   display: flex;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 .logo {
@@ -21,7 +22,7 @@ $total-items: 3;
     background: rgba(255, 255, 255, 0.3);
   }
   &__title {
-    font-family: $decoration-font;
+    font-family: $secondary-font;
     font-size: 3rem;
     font-weight: 700;
     display: flex;
@@ -62,6 +63,7 @@ $total-items: 3;
         &--active {
           position: relative;
           font-weight: 700;
+          color: $primary-color;
 
           //&::after {
           //  position: absolute;
@@ -96,7 +98,7 @@ $total-items: 3;
           & > .navigation__list > a {
             transform: none;
             color: white;
-            @for $i from 1 through $total-items {
+            @for $i from 1 through $navigation-items {
               &:nth-child(#{$i}) {
                 transition: all 0.2s ease-in 0.2s * $i;
               }
