@@ -32,8 +32,10 @@
             ],
             "styles": [
               "node_modules/normalize.css/normalize.css",
-              "node_modules/@fontsource/dm-serif-display",
-              "node_modules/@fontsource/roboto",
+              "node_modules/@fontsource/dm-serif-display/latin-ext-400.css",
+              "node_modules/@fontsource/roboto/latin-ext-100.css",
+              "node_modules/@fontsource/roboto/latin-ext-400.css",
+              "node_modules/@fontsource/roboto/latin-ext-700.css",
               "src/styles.scss"
             ],
             "scripts": []
