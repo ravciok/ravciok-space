@@ -8,17 +8,17 @@
     <div class="post-header">
       <div class="post-header__date">
         <span>{{ data.date | date | date }}</span>
-        <span>{{ data.time }}</span>
+        <span>{{ data.readingTime | number: '1.0-0' }} min read</span>
       </div>
 
       <div class="post-header__social">
-        <a class="space-link space-link--icon" [href]="twitterLink" target="_blank"
+        <a class="space-link space-link--icon" [href]="data.shareLinks.twitter" target="_blank" rel="noreferrer"
           ><fa-icon [icon]="icons.faTwitter"></fa-icon>
         </a>
-        <a class="space-link space-link--icon" [href]="linkedinLink" target="_blank"
+        <a class="space-link space-link--icon" [href]="data.shareLinks.linkedin" target="_blank" rel="noreferrer"
           ><fa-icon [icon]="icons.faLinkedin"></fa-icon
         ></a>
-        <a class="space-link space-link--icon" [href]="facebookLink" target="_blank"
+        <a class="space-link space-link--icon" [href]="data.shareLinks.facebook" target="_blank" rel="noreferrer"
           ><fa-icon [icon]="icons.faFacebook"></fa-icon
         ></a>
       </div>

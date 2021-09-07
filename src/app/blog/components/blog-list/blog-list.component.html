@@ -12,7 +12,7 @@
             </a>
             <div class="post__time">
               <span>{{ blog.date | date }}</span>
-              <span>{{ blog.time }}</span>
+              <span>{{ blog.readingTime | number: '1.0-0' }} min read</span>
             </div>
           </div>
           <div class="post__cover">

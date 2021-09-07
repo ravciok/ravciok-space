@@ -1,7 +1,6 @@
 require('../env/config');
 const fs = require('fs');
 const https = require('https');
-const readingTime = require('reading-time');
 
 fs.mkdir('content/blog', { recursive: true }, () => {});
 
@@ -26,16 +25,13 @@ https
 
         console.log(`fetched ${postsLength} blog posts:`);
 
-        for (const [index, item] of posts.entries()) {
-          const stats = readingTime(item.fields.markdown);
-          const markdown = item.fields.markdown.replace('---\n', `---\n\ntime: ${stats.text}`);
-
-          fs.writeFile(`./content/blog/${item.fields.slug}.md`, markdown, (err) => {
+        posts.forEach((item, index) => {
+          fs.writeFile(`./content/blog/${item.fields.slug}.md`, item.fields.markdown, (err) => {
             if (err) throw err;
 
             console.log(`${index + 1}/${postsLength} - ${item.fields.slug}`);
           });
-        }
+        });
       });
     }
   )
