@@ -98,7 +98,7 @@ $navigation-items: 4;
             color: white;
             @for $i from 1 through $navigation-items {
               &:nth-child(#{$i}) {
-                transition: all 0.3s ease-in 0.2s * $i;
+                transition: all 0.3s ease-in 0.1s * $i;
               }
             }
           }
@@ -188,7 +188,7 @@ $navigation-items: 4;
             font-size: 3rem;
             color: transparent;
             margin: 1rem 0;
-            transform: translateX(30%);
+            transform: translateX(50%);
             transition: none;
           }
         }

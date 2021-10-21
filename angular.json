@@ -32,9 +32,9 @@
             ],
             "styles": [
               "node_modules/normalize.css/normalize.css",
-              "node_modules/@fontsource/hind/300.css",
-              "node_modules/@fontsource/hind/400.css",
-              "node_modules/@fontsource/hind/700.css",
+              "node_modules/@fontsource/hind/latin-300.css",
+              "node_modules/@fontsource/hind/latin-400.css",
+              "node_modules/@fontsource/hind/latin-700.css",
               "src/styles.scss"
             ],
             "scripts": []
