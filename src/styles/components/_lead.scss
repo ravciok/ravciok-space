@@ -1,0 +1,40 @@
+.header-container {
+  flex-direction: column-reverse;
+  margin: 0 auto 5rem;
+  .lead {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    line-height: normal;
+  }
+
+  .picture {
+    width: 80%;
+    display: flex;
+    align-self: center;
+    margin-bottom: 2rem;
+    svg {
+      g {
+        rect {
+          fill: $primary-color;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $desktop-break) {
+    flex-direction: row;
+
+    .lead {
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+    .picture {
+      width: 300px;
+      margin: 0;
+      svg {
+        margin-right: -5rem;
+      }
+    }
+  }
+}

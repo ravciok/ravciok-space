@@ -6,11 +6,10 @@ import { AppComponent } from './app.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from '../core/core.module';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, ScullyLibModule, HttpClientModule, CoreModule, FontAwesomeModule],
+  imports: [BrowserModule, AppRoutingModule, ScullyLibModule, HttpClientModule, CoreModule],
   providers: [Title],
   bootstrap: [AppComponent],
 })

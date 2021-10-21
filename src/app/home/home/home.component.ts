@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 import { ScullyRoutesService } from '@scullyio/ng-lib';
+// @ts-ignore
+import blobshape from 'blobshape';
 
 @Component({
   selector: 'space-home',
@@ -16,4 +18,8 @@ export class HomeComponent {
 
   public trackByFn = (index: number) => index;
   constructor(private srs: ScullyRoutesService) {}
+
+  public generateBlob(): string {
+    return blobshape({ size: 300, growth: 8, edges: 12, seed: '12345678' }).path;
+  }
 }

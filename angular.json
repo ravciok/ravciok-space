@@ -32,10 +32,9 @@
             ],
             "styles": [
               "node_modules/normalize.css/normalize.css",
-              "node_modules/@fontsource/dm-serif-display/latin-ext-400.css",
-              "node_modules/@fontsource/roboto/latin-ext-100.css",
-              "node_modules/@fontsource/roboto/latin-ext-400.css",
-              "node_modules/@fontsource/roboto/latin-ext-700.css",
+              "node_modules/@fontsource/hind/300.css",
+              "node_modules/@fontsource/hind/400.css",
+              "node_modules/@fontsource/hind/700.css",
               "src/styles.scss"
             ],
             "scripts": []

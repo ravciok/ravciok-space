@@ -1,15 +1,37 @@
 <space-section>
-  <div class="container" style="margin-bottom: -115px">
+  <div class="container header-container">
     <div class="lead">
-      Hi, I'm Rafał Ciok.<br />
-      I'm passionate Frontend specialist.<br />
-      I help teams to build quality software.
+      <p>
+        Hi, I'm Rafał <angular-emojis name="heart"></angular-emojis><br />
+        I'm passionate Frontend specialist.<br />
+        I help teams to build quality software.
+      </p>
     </div>
-    <div class="picture"><img class="picture__image" src="assets/images/rafal-ciok-bw-web.png" /></div>
+
+    <div class="picture">
+      <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+        <clipPath id="mask">
+          <path [attr.d]="generateBlob()" />
+        </clipPath>
+        ()
+
+        <g clip-path="url(#mask)">
+          <rect height="100%" width="100%"></rect>
+          <image
+            width="90%"
+            height="90%"
+            preserveAspectRatio="xMidYMid slice"
+            href="assets/images/rafal-ciok-bw-web.png"
+            x="5%"
+            y="10%"
+          />
+        </g>
+      </svg>
+    </div>
   </div>
 </space-section>
 
-<space-section [tilt]="true" color="purple-bg">
+<space-section>
   <div class="container container--column">
     <h2 class="container__title">Latest blog posts</h2>
 
@@ -36,7 +58,7 @@
   </div>
 </space-section>
 
-<space-section [tilt]="true" color="grey-bg">
+<space-section>
   <div class="container container--column">
     <h2 class="container__title">Contact</h2>
     <div *ngFor="let blog of blogs$ | async | slice: 0:5; trackBy: trackByFn">
