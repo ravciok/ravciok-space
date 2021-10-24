@@ -6,6 +6,7 @@
     align-items: center;
     font-size: 1.3rem;
     line-height: normal;
+    font-weight: 500;
   }
 
   .picture {
@@ -17,6 +18,7 @@
       g {
         rect {
           fill: $primary-color;
+          filter: opacity(50%);
         }
       }
     }

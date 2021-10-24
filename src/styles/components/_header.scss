@@ -24,6 +24,7 @@ $navigation-items: 4;
   &__title {
     font-size: 3rem;
     font-weight: 700;
+    line-height: normal;
     display: flex;
     align-items: center;
     &--animate {
@@ -56,24 +57,12 @@ $navigation-items: 4;
       display: block;
       .navigation__element {
         margin: 0 0 0 3rem;
-        font-weight: 700;
+        font-weight: 500;
         color: $secondary-text-color;
         border-bottom: 2px solid transparent;
         &--active {
           color: $primary-color;
           border-bottom: 2px solid $primary-color;
-
-          //&::after {
-          //  position: absolute;
-          //  left: -14px;
-          //  top: 50%;
-          //  transform: translateY(-50%);
-          //  display: block;
-          //  content: '';
-          //  width: 4px;
-          //  height: 20px;
-          //  background: mediumpurple;
-          //}
         }
       }
     }
@@ -87,8 +76,6 @@ $navigation-items: 4;
       left: -9999px;
       height: 0;
       width: 0;
-      -webkit-appearance: none;
-      -moz-appearance: none;
       appearance: none;
       &:checked {
         & ~ .navigation__container {
@@ -140,7 +127,6 @@ $navigation-items: 4;
           width: 30px;
           height: 2px;
           background: black;
-          //cross
           transition: all 0.3s ease-in;
         }
 
@@ -177,7 +163,6 @@ $navigation-items: 4;
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        //card
         transition: all 0.3s ease-in;
         .navigation__list {
           display: flex;
@@ -186,6 +171,7 @@ $navigation-items: 4;
           padding: 0 1.5rem;
           .list__element {
             font-size: 3rem;
+            font-weight: 500;
             color: transparent;
             margin: 1rem 0;
             transform: translateX(50%);

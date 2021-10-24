@@ -7,7 +7,6 @@
 
 @mixin horizontal-info-with-divider() {
   color: $secondary-text-color;
-  font-size: 0.8rem;
   span,
   a {
     &::after {
