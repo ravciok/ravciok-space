@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
-import { Title } from '@angular/platform-browser';
-import { shareReplay, tap } from 'rxjs/operators';
+import { Meta, Title } from '@angular/platform-browser';
+import { tap } from 'rxjs/operators';
 import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faLinkedin, faTwitter, IconDefinition } from '@fortawesome/free-brands-svg-icons';
 
@@ -19,13 +19,13 @@ export class BlogComponent {
     faFacebook,
     faLinkedin,
   };
-  public data$ = this.routes.getCurrent().pipe(shareReplay(1), tap(this.setInitData));
+  public data$ = this.routes.getCurrent().pipe(tap(this.setInitData()));
 
   public twitterLink = '';
   public facebookLink = '';
   public linkedinLink = '';
 
-  constructor(private routes: ScullyRoutesService, private titleService: Title) {}
+  constructor(private routes: ScullyRoutesService, private titleService: Title, private metaService: Meta) {}
 
   private setInitData(): (data: ScullyRoute) => void {
     return (data) => {
@@ -36,6 +36,7 @@ export class BlogComponent {
       this.linkedinLink = `https://www.linkedin.com/shareArticle?mini=true&url=${url}`;
 
       this.titleService.setTitle(data.title + '');
+      this.metaService.updateTag({ name: 'description', content: data.description });
     };
   }
 }

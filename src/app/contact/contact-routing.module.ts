@@ -7,10 +7,18 @@ const routes: Routes = [
   {
     path: '',
     component: ContactComponent,
+    data: {
+      title: 'Contact',
+      description: 'Meta description contact',
+    },
   },
   {
     path: 'success',
     component: MessageComponent,
+    data: {
+      title: 'Contact',
+      description: 'Meta description contact',
+    },
   },
 ];
 

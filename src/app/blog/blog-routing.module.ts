@@ -8,6 +8,10 @@ const routes: Routes = [
   {
     path: '',
     component: BlogListComponent,
+    data: {
+      title: 'Blog',
+      description: 'Meta description blog',
+    },
   },
   {
     path: ':slug',

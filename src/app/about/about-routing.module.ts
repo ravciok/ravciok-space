@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: '',
     component: AboutComponent,
+    data: {
+      title: 'About',
+      description: 'Meta description about',
+    },
   },
 ];
 
