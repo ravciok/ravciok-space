@@ -1,6 +1,7 @@
 require('../env/config');
 const fs = require('fs');
 const https = require('https');
+const colors = require('colors');
 
 fs.mkdir('content/blog', { recursive: true }, () => {});
 
@@ -25,13 +26,27 @@ https
 
         console.log(`fetched ${postsLength} blog posts:`);
 
-        posts.forEach((item, index) => {
-          fs.writeFile(`./content/blog/${item.fields.slug}.md`, item.fields.markdown, (err) => {
-            if (err) throw err;
+        posts.reduce(
+          (acc, item, index) =>
+            acc.then(
+              () =>
+                new Promise((resolve, reject) => {
+                  fs.writeFile(`./content/blog/${item.fields.slug}.md`, item.fields.markdown, (err) => {
+                    if (err) {
+                      console.log('\u2718'.red, `${index + 1}/${postsLength} - ${item.fields.slug}`);
 
-            console.log(`${index + 1}/${postsLength} - ${item.fields.slug}`);
-          });
-        });
+                      resolve(err);
+                      return;
+                    }
+
+                    console.log('\u2714'.green, `${index + 1}/${postsLength} - ${item.fields.slug}`);
+
+                    resolve();
+                  });
+                })
+            ),
+          Promise.resolve()
+        );
       });
     }
   )
