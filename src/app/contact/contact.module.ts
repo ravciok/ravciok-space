@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ContactRoutingModule } from './contact-routing.module';
-import { ContactComponent } from './contact/contact.component';
-import { UiModule } from '../ui/ui.module';
-import { MessageComponent } from './message/message.component';
+import { ContactRoutingModule } from '@contact/contact-routing.module';
+import { ContactComponent } from '@contact/contact/contact.component';
+import { UiModule } from '@ui/ui.module';
+import { MessageComponent } from '@contact/message/message.component';
 
 @NgModule({
   declarations: [ContactComponent, MessageComponent],

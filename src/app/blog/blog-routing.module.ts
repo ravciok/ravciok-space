@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { BlogComponent } from './components/blog-post/blog.component';
-import { BlogListComponent } from './components/blog-list/blog-list.component';
+import { BlogComponent } from '@blog/components/blog-post/blog.component';
+import { BlogListComponent } from '@blog/components/blog-list/blog-list.component';
 
 const routes: Routes = [
   {

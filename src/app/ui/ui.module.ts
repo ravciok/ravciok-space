@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SectionComponent } from './section/section.component';
+import { SectionComponent } from '@ui/section/section.component';
 import { AngularEmojisModule } from 'angular-emojis';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 

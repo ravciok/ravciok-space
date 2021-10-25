@@ -16,7 +16,17 @@
     "importHelpers": true,
     "target": "es2017",
     "module": "es2020",
-    "lib": ["es2018", "dom"]
+    "lib": ["es2018", "dom"],
+    "paths": {
+      "@about/*": ["src/app/about/*"],
+      "@blog/*": ["src/app/blog/*"],
+      "@contact/*": ["src/app/contact/*"],
+      "@core/*": ["src/app/core/*"],
+      "@home/*": ["src/app/home/*"],
+      "@main/*": ["src/app/main/*"],
+      "@ui/*": ["src/app/ui/*"],
+      "@env/*": ["src/environments/*"],
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ScullyLibModule } from '@scullyio/ng-lib';
-import { BlogRoutingModule } from './blog-routing.module';
-import { BlogComponent } from './components/blog-post/blog.component';
-import { BlogListComponent } from './components/blog-list/blog-list.component';
-import { UiModule } from '../ui/ui.module';
+import { BlogRoutingModule } from '@blog/blog-routing.module';
+import { BlogComponent } from '@blog/components/blog-post/blog.component';
+import { BlogListComponent } from '@blog/components/blog-list/blog-list.component';
+import { UiModule } from '@ui/ui.module';
 
 @NgModule({
   declarations: [BlogListComponent, BlogComponent],
