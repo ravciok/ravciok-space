@@ -5,6 +5,8 @@ import { tap } from 'rxjs/operators';
 import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faLinkedin, faTwitter, IconDefinition } from '@fortawesome/free-brands-svg-icons';
 
+declare var ng: any;
+
 @Component({
   selector: 'space-blog',
   templateUrl: './blog.component.html',
@@ -19,22 +21,12 @@ export class BlogComponent {
     faFacebook,
     faLinkedin,
   };
-  public data$ = this.routes.getCurrent().pipe(tap(this.setInitData()));
-
-  public twitterLink = '';
-  public facebookLink = '';
-  public linkedinLink = '';
+  public data$ = this.routes.getCurrent().pipe(tap(this.updateMetaData()));
 
   constructor(private routes: ScullyRoutesService, private titleService: Title, private metaService: Meta) {}
 
-  private setInitData(): (data: ScullyRoute) => void {
+  private updateMetaData(): (data: ScullyRoute) => void {
     return (data) => {
-      const url: string = `https://ravciok.dev${data.route}`;
-
-      this.twitterLink = `https://twitter.com/intent/tweet?url=${url}&text=${data.title}&via=ravciok`;
-      this.facebookLink = `https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${data.title}`;
-      this.linkedinLink = `https://www.linkedin.com/shareArticle?mini=true&url=${url}`;
-
       this.titleService.setTitle(data.title + '');
       this.metaService.updateTag({ name: 'description', content: data.description });
     };

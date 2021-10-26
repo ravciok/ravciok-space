@@ -1,7 +1,10 @@
-require('../env/config');
 const fs = require('fs');
 const https = require('https');
 const colors = require('colors');
+
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 
 fs.mkdir('content/blog', { recursive: true }, () => {});
 

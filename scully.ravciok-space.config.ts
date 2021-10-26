@@ -1,5 +1,5 @@
 import { ScullyConfig } from '@scullyio/scully';
-import { ChangeTitle, CommentsScript, DisableAngular } from './scully';
+import { ChangeTitle, CommentsScript, DisableAngular, ShareLinks } from './scully';
 
 export const config: ScullyConfig = {
   projectRoot: './src',
@@ -12,7 +12,7 @@ export const config: ScullyConfig = {
       slug: {
         folder: './content/blog',
       },
-      postRenderers: [DisableAngular, ChangeTitle, CommentsScript],
+      postRenderers: [DisableAngular, ChangeTitle, ShareLinks, CommentsScript],
     },
   },
 };

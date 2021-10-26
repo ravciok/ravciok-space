@@ -40,6 +40,7 @@
     "colors": "^1.4.0",
     "dotenv": "^10.0.0",
     "normalize.css": "^8.0.1",
+    "prism-themes": "^1.9.0",
     "rxjs": "~6.6.0",
     "scully-plugin-disable-angular": "^8.0.0",
     "scully-plugin-page-title": "^2.0.0",

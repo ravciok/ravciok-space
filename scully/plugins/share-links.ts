@@ -1,5 +1,8 @@
-import '../../env/config.js';
 import { HandledRoute, registerPlugin } from '@scullyio/scully';
+
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 
 export const ShareLinks = 'shareLinks';
 
