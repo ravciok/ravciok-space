@@ -22,8 +22,8 @@ $unicodeMap: (
   ),
 );
 
-@include fontFace($weight: 300, $display: fallback, $unicodeMap: $unicodeMap);
-@include fontFace($weight: 400, $display: fallback, $unicodeMap: $unicodeMap);
-@include fontFace($weight: 500, $display: fallback, $unicodeMap: $unicodeMap);
-@include fontFace($weight: 600, $display: fallback, $unicodeMap: $unicodeMap);
-@include fontFace($weight: 700, $display: fallback, $unicodeMap: $unicodeMap);
+@include fontFace($weight: 300, $display: fallback, $unicodeMap: $unicodeMap, $fontDir: '/assets/fonts/hind');
+@include fontFace($weight: 400, $display: fallback, $unicodeMap: $unicodeMap, $fontDir: '/assets/fonts/hind');
+@include fontFace($weight: 500, $display: fallback, $unicodeMap: $unicodeMap, $fontDir: '/assets/fonts/hind');
+@include fontFace($weight: 600, $display: fallback, $unicodeMap: $unicodeMap, $fontDir: '/assets/fonts/hind');
+@include fontFace($weight: 700, $display: fallback, $unicodeMap: $unicodeMap, $fontDir: '/assets/fonts/hind');
