@@ -17,8 +17,7 @@
     svg {
       g {
         rect {
-          fill: $primary-color;
-          filter: opacity(50%);
+          fill: rgba($primary-color, 0.5);
         }
       }
     }

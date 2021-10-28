@@ -34,4 +34,12 @@
       width: 50%;
     }
   }
+  &--scroll-horizontal {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  &--scroll-vertical {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
 }

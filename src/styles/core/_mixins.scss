@@ -3,6 +3,7 @@
   -webkit-line-clamp: $lines;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  line-height: inherit;
 }
 
 @mixin horizontal-info-with-divider() {
@@ -27,4 +28,5 @@
   outline: none;
   text-decoration: none;
   color: inherit;
+  border-radius: 0;
 }
